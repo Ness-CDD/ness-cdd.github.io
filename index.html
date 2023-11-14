@@ -161,13 +161,13 @@
     <div class="cube-content">
         <div class="cube-left">
             
-<div class="cube-excerpt" id="cube-excerpt-test">
+<div class="cube-excerpt" id="cube-excerpt-linux系统">
     <header class="cube-excerpt-header">
-        <h1><a href="/2023/09/14/test/">test</a></h1>
+        <h1><a href="/2023/11/14/linux%E7%B3%BB%E7%BB%9F/">linux系统</a></h1>
         <div class="cube-excerpt-header-msg">
             <div class="cube-excerpt-date">
                 <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
-                2023-09-14
+                2023-11-14
             </div>
             <div class="cube-excerpt-tags">
                 <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
@@ -178,49 +178,90 @@
     <article class="cube-excerpt-entry cube-markdown">
         
         
-           <h1 id="测试测试"><a href="#测试测试" class="headerlink" title="测试测试"></a>测试测试</h1>
+           <h1 id="Linux系统的介绍"><a href="#Linux系统的介绍" class="headerlink" title="Linux系统的介绍"></a>Linux系统的介绍</h1><p>Linux是一套并放源代码程序的，并可以自由传播的类UNIX操作系统软件</p>
+<p>特点</p>
+<p>多用户、多任务并且支持多线程(可以支持更多处理任务)和多CPU的操作系统</p>
+<h2 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h2><p>Linux发展历史:unix – minix – GNU — Linux早期内核</p>
+<h2 id="操作系统选择介绍"><a href="#操作系统选择介绍" class="headerlink" title="操作系统选择介绍"></a>操作系统选择介绍</h2><p>Ubuntu:桌面系统领域更多开发人员会选用</p>
+<p>Radhat:应用服务部署需要收费</p>
+<p>Centos:应用服务部署免费试用   互联网公司常用   </p>
+<p>Debian:注重安全性的企业           游戏公司 金融公司</p>
+<p>Kali:主要是应用网络安全</p>
+<h2 id="操作系统的获取方式"><a href="#操作系统的获取方式" class="headerlink" title="操作系统的获取方式"></a>操作系统的获取方式</h2><p>稳定版本系统：旧的</p>
+<p>最新版本系统：新的</p>
+<p>https: &#x2F; &#x2F; developer.aliyun.com&#x2F;mirror&#x2F;</p>
+<p>https: &#x2F;&#x2F;mirrors.aliyun.com&#x2F;centos&#x2F;– 最新版本系统下载地址</p>
+<h2 id="虚拟环境部署过程"><a href="#虚拟环境部署过程" class="headerlink" title="虚拟环境部署过程"></a>虚拟环境部署过程</h2><h3 id="虚拟环境概念"><a href="#虚拟环境概念" class="headerlink" title="虚拟环境概念:"></a>虚拟环境概念:</h3><p>需要有多个系统同时存在</p>
+<p>提高硬件资源利用率</p>
+<p>可以节省物理空间使用</p>
+<h3 id="虚拟环境部署"><a href="#虚拟环境部署" class="headerlink" title="虚拟环境部署:"></a>虚拟环境部署:</h3><p>windows – vmware workstation (win7 - vmware 12或者14 win10 - vmare 15或者16)</p>
+<p>mac    –     vmware fusion 12</p>
+<p>安装部署过程:下一步操作安装&#x2F;输入许可证号</p>
+<h3 id="虚拟主机创建："><a href="#虚拟主机创建：" class="headerlink" title="虚拟主机创建："></a>虚拟主机创建：</h3><p>CPU数量与内核</p>
+<p>内存容量设置</p>
+<h4 id="网络模式选择"><a href="#网络模式选择" class="headerlink" title="网络模式选择"></a>网络模式选择</h4><p>桥接模式：</p>
+<p>特点：</p>
+<p>1)可以实现访问外网</p>
+<p>2)保证物理系统(windows)和虚拟系统(Linux)网络配置网段信息必须一致相同</p>
+<p>windows 网络地址:192.168.14.252 网段192.168.14.0    张三教室里面</p>
+<p>Linux01 网络地址:192.168.14.251网段192.168.14.0</p>
+<p>Linux02网络地址:192.168.14.250网段192.168.14.0</p>
+<p>windows网络地址:192.168.14.152 网段192.168.14.0    李四教室里面</p>
+<p>Linux01网络地址:192.168.14.151网段192.168.14.0</p>
+<p>Linux01 网络地址:192.168.14.150网段192.168.14.0</p>
+<p>容易出现地址冲突可以实现局域网物理主机和虚拟主机之间相互访问</p>
+<p>NAT模式：</p>
+<p>特点：</p>
+<p>1)可以实现访问外网</p>
+<p>2)物理系统网段信息不用和虚拟系统网段保持一致<br>windows网络地址:192.168.14.252网段192.168.14.0    张三  教室里面</p>
+<p>Linux01 网络地址:10.0.0.200网段10.0.0.0</p>
+<p>Linux02网络地址:10.0.0.201网段10.0.0.0</p>
+<p>windows网络地址:192.168.14.251 网段192.168.14.0      李四教室里面</p>
+<p>Linux01 网络地址:10.0.0.200     网段10.0.0.0</p>
+<p>Linux02网络地址:10.0.0.201      网段10.0.0.0</p>
+<p>避免出现地址冲突无法实现局域网物理主机直接访问虚拟主机</p>
+<p>仅主机模式：</p>
+<p>特点：</p>
+<p>1)不能实现访问外网</p>
+<p>磁盘的选择：30G~100G</p>
+<p>PS：虚拟主机创建好之后，生成数据信息尽量保存在非c盘目录中；多个虚拟主机数据进行分类保存</p>
+<h2 id="虚拟的网络设置"><a href="#虚拟的网络设置" class="headerlink" title="虚拟的网络设置"></a>虚拟的网络设置</h2><p>虚拟的网络编辑器</p>
+<p>虚拟网络编辑器–选择虚拟网卡 (vmnet8) 选择网路模式 (nat) 设置网段信息 (10.0.0.0 255.255.255.0) –设置网关地址（10.0.0.254）</p>
+<h2 id="操作系统的安装部署"><a href="#操作系统的安装部署" class="headerlink" title="操作系统的安装部署"></a>操作系统的安装部署</h2><p>第一个历程:虚拟主机中加载系统镜像</p>
+<p>选择光驱设备选择光驱文件(IOS)    PS：新版本虚拟机设置时已经选择</p>
+<p>第二个历程：启动虚拟主机，加载系统镜像文件，显示安装界面</p>
+<p>修改网卡名称:输入一段配置参数信息net.ifnames&#x3D;0 biosdevname&#x3D;0</p>
+<p>第三个历程:进行系统网卡地址设置激活网卡:</p>
+<p>IP地址设置:10.0.0.200IP掩码设置:255.255.255.0IP网卡设置:10.0.0.254网卡DNS设置:223.5.5.5</p>
+<p>第四个历程:进行系统分区操作</p>
+<p>Linux基本分区方式:</p>
+<p>第一个分区:启动分区&#x2F; boot分区200M</p>
+<p>第二个分区:交换分区swap分区大小参考&#x3D;总的内存*1.5&lt;&#x3D;8G  3G可以临时将磁盘空间交换给内存使用</p>
+<p>第三个分区:根分区&#x2F;分区(c盘)剩余空间存储数据信息</p>
+<p>运维人员管理系统职责:</p>
+<p>1)保证数据不能丢失</p>
+<p>2)保证网站服务7*24稳定运行</p>
+<p>3)保证用户访问网站体验</p>
+<p>第五个历程:系统预装软件库软件可以加载现成</p>
+<p>第六个历程:设置管理员用户密码</p>
+<p>root   centos</p>
+<h2 id="系统基础操作规范"><a href="#系统基础操作规范" class="headerlink" title="系统基础操作规范"></a>系统基础操作规范</h2><h3 id="第一个规范"><a href="#第一个规范" class="headerlink" title="第一个规范:"></a>第一个规范:</h3><p>输入命令信息需要在命令提示符之后输入命令提示符：</p>
+<p>[root@localhost ~] #</p>
+<p>①             ②     ③  ④</p>
+<p>① 表示当前登录系统用户的名称</p>
+<p>②表示当前系统主机名称</p>
+<p>③表示当前所进入系统目录路径</p>
+<p>④表示此时登录系统的权限          </p>
+<p>root管理员权限 #     非管理员权限登录   $</p>
+<h3 id="第二个规范-命令输入格式规范"><a href="#第二个规范-命令输入格式规范" class="headerlink" title="第二个规范:命令输入格式规范"></a>第二个规范:命令输入格式规范</h3><p>第一个输入规范:命令    回车</p>
+<p>第二个输入规范:命令(空格) [-] 参数</p>
+<p>ip 查看网络信息<br>ip address(参数)show(参数)ip route(参数)show(参数)<br>我想找女朋友 -腿长 -肤白 -貌美<br>第三个输入规范:命令(空格) [-] 参数(空格)对象</p>
+<p>cat -n &#x2F;etc&#x2F;hosts</p>
+
         
     </article>
     <footer class="cube-excerpt-footer">
-        <a class="cube-excerpt-more" href="/2023/09/14/test/">Read More</a>
-    </footer>
-</div>
-
-<div class="cube-excerpt" id="cube-excerpt-Hello World">
-    <header class="cube-excerpt-header">
-        <h1><a href="/2023/09/14/hello-world/">Hello World</a></h1>
-        <div class="cube-excerpt-header-msg">
-            <div class="cube-excerpt-date">
-                <i class="cube-icon cube-icon-date" aria-hidden="true"></i>
-                2023-09-14
-            </div>
-            <div class="cube-excerpt-tags">
-                <i class="cube-icon cube-icon-tag" aria-hidden="true"></i>
-                
-            </div>
-        </div>
-    </header>
-    <article class="cube-excerpt-entry cube-markdown">
-        
-        
-           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-        
-    </article>
-    <footer class="cube-excerpt-footer">
-        <a class="cube-excerpt-more" href="/2023/09/14/hello-world/">Read More</a>
+        <a class="cube-excerpt-more" href="/2023/11/14/linux%E7%B3%BB%E7%BB%9F/">Read More</a>
     </footer>
 </div>
 
@@ -287,7 +328,7 @@
     
     
     <div class="count">
-        <a class="count articles"><span>2</span>Article</a>
+        <a class="count articles"><span>1</span>Article</a>
         <a class="count tags"><span>0</span>Tags</a>
         <a class="count categories"><span>0</span>Categories</a>
     </div>
@@ -326,23 +367,10 @@
                     <span>1</span>
                 </p>
                 <p class="title">
-                    <a href="/2023/09/14/test/" title="test">test</a>
+                    <a href="/2023/11/14/linux%E7%B3%BB%E7%BB%9F/" title="linux系统">linux系统</a>
                 </p>
             </div>
             
-        </li>
-        
-        
-        
-        <li>
-            <div class="normal">
-                <p class="index">
-                    <span>2</span>
-                </p>
-                <p class="title">
-                    <a href="/2023/09/14/hello-world/" title="Hello World">Hello World</a>
-                </p>
-            </div>
         </li>
         
         
